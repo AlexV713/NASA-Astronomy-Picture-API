@@ -1,5 +1,62 @@
+/* Mobile Stylesheets */
 body,
 html {
     margin: 0;
     padding: 0;
+    background-color: #1f2022;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+footer {
+    text-align: center;
+}
+
+a,
+img {
+    display: block;
+    margin: auto;
+    width: 25em;
+    height: auto;
+}
+
+p {
+    padding-left: 2em;
+    padding-right: 2em;
+    line-height: 1.5;
+}
+
+
+.info {
+    display: none;
+}
+
+/* Tablet Stylesheets */
+@media only screen and (min-width: 480px) {
+    a,
+    img {
+        width: 45em;
+        height: auto;
+    }
+
+    p {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+/* Desktop Stylesheets */
+@media only screen and (min-width: 1025px) {
+    a,
+    img {
+        width: 75em;
+        height: auto;
+    }
+
+    p {
+        padding-left: 26em;
+        padding-right: 26em;
+    }
 }
