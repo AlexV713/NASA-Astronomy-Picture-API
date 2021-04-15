@@ -1,65 +1,86 @@
 /* Mobile Stylesheets */
 body,
 html {
-    margin: 0;
     padding: 0;
-    background-color: #1f2022;
-    color: white;
+    margin: 0;
+    background-color: #0e1014;
+    color: #FFFFFF;
+}
+
+#wrapper {
+    margin: 0.3rem;
 }
 
 h1,
 h2,
-h3,
-footer {
+h3 {
     text-align: center;
 }
 
-a,
+a {
+    display: grid;
+    place-items: center;
+}
+
 img {
-    display: block;
-    margin: auto;
-    width: 25em;
+    width: 20em;
     height: auto;
+    border: outset rgb(105, 105, 105) 4px;
 }
 
 p {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    line-height: 1.5;
     font-size: 1.2em;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 0.3rem;
+}
 
 .info {
-    display: none;
+    display: none; 
 }
-
 /* Tablet Stylesheets */
 @media only screen and (min-width: 480px) {
-    a,
     img {
         width: 45em;
         height: auto;
-    }
-
-    p {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-        font-size: 1.2em;
     }
 }
 
 /* Desktop Stylesheets */
 @media only screen and (min-width: 1025px) {
-    a,
-    img {
-        width: 75em;
+    #app {
+        margin: auto;
+        width: 80em;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        place-items: center;
+        padding: 1em;
+        border: solid #FFFFFF 2px;
+    }
+
+    #daily-image {
+        grid-column: 1 / span 3;
+    }
+
+    img,
+    a {
+        width: 40em;
         height: auto;
+        margin: auto;
     }
 
     p {
-        padding-left: 22em;
-        padding-right: 22em;
-        font-size: 1.2em
+        padding-left: 1.5em;
+        padding-right: 1.5em;
     }
 }
