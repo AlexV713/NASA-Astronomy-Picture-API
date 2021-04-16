@@ -26,7 +26,7 @@
                 <div id="wrapper">
                     <div id="daily-image">
                         <a v-bind:href="info.data.url">
-                            <img v-bind:src="info.data.hdurl" alt="NASA AStronomy Picture of the Day">
+                            <iframe v-bind:src="info.data.url" title="NASA AStronomy Picture of the day"></iframe>
                         </a>
                     </div>
                     <div id="information">

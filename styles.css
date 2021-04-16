@@ -22,9 +22,9 @@ a {
     place-items: center;
 }
 
-img {
-    width: 20em;
-    height: auto;
+iframe {
+    width: 22em;
+    height: 15em;
     border: outset rgb(105, 105, 105) 4px;
 }
 
@@ -43,13 +43,14 @@ footer {
 }
 
 .info {
-    display: none; 
+    display: none;
 }
+
 /* Tablet Stylesheets */
 @media only screen and (min-width: 480px) {
-    img {
+    iframe {
         width: 45em;
-        height: auto;
+        height: 30em;
     }
 }
 
@@ -72,10 +73,10 @@ footer {
         grid-column: 1 / span 3;
     }
 
-    img,
+    iframe,
     a {
         width: 40em;
-        height: auto;
+        height: 30em;
         margin: auto;
     }
 
