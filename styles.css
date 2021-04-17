@@ -26,6 +26,13 @@ iframe {
     width: 22em;
     height: 15em;
     border: outset rgb(105, 105, 105) 4px;
+    display: none;
+}
+
+img {
+    width: 22em;
+    height: 15em;
+    border: outset rgb(105, 105, 105) 4px; 
 }
 
 p {
@@ -52,6 +59,11 @@ footer {
         width: 45em;
         height: 30em;
     }
+
+    img {
+        width: 45em;
+        height: 30em;  
+    }
 }
 
 /* Desktop Stylesheets */
@@ -74,6 +86,13 @@ footer {
     }
 
     iframe,
+    a {
+        width: 40em;
+        height: 30em;
+        margin: auto;
+    }
+
+    img,
     a {
         width: 40em;
         height: 30em;
