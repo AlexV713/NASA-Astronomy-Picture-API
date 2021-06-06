@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>Vue.js and API using Axios</title>
+    <title>NASA Astronomy Picture of the Day</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <!-- Call Vue.js via CDN for templating -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <!-- Call the Vue.js router via unpkg -->
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <!-- Call Axios via CDN for API calls -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -22,16 +23,21 @@
             </section>
             <section v-if="info">
                 <h1>NASA Astronomy Picture of the Day</h1>
-                <h2>{{ info.data.date }}</h2>
                 <div id="wrapper">
                     <div id="daily-image">
-                        <a v-bind:href="info.data.url">
-                            <iframe v-bind:src="info.data.url" title="NASA AStronomy Picture of the day"></iframe>
-                            <img v-bind:src="info.data.url" alt="NASA Astronomy Pic of the day">
-                        </a>
+                        <div id="lightboxes-container">
+                            <a href="#image" class="image">
+                                <img v-bind:src="info.data.url" alt="NASA Astronomy Pic of the day" class="thumbail">
+                            </a>
+                            <div class="lightbox" id="image">
+                                <button onclick="goBack()">Go back</button>
+                                <img v-bind:src="info.data.url">
+                            </div>
+                        </div>
                     </div>
                     <div id="information">
-                        <h3>{{  info.data.title }}</h3>
+                        <h2>{{  info.data.title }}</hh2>
+                        <h3>{{ info.data.date }}</h3>
                         <p>{{ info.data.explanation }}</p>
                     </div>
                 </div>

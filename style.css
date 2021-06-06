@@ -1,0 +1,106 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0e1014;
+  color: white;
+}
+
+#app h1,
+#app h2 {
+  text-align: center;
+}
+
+#app #wrapper #daily-image {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#app #wrapper #daily-image #lightboxes-container .image {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#app #wrapper #daily-image #lightboxes-container .thumbnail {
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#app #wrapper #daily-image #lightboxes-container .lightbox {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cf;
+}
+
+#app #wrapper #daily-image #lightboxes-container button {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  background: white;
+  color: black;
+  padding: 0.5em;
+}
+
+#app #wrapper #daily-image #lightboxes-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#app #wrapper #daily-image #lightboxes-container .lightbox:target {
+  outline: none;
+  display: block;
+}
+
+#app #wrapper #information h3 {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+#app #wrapper #information p {
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+#app .info {
+  display: none;
+}
+
+#app footer {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Tablet Stylesheets */
+@media only screen and (min-width: 481px) {
+  #app #information {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1025px) {
+  #app #information {
+    margin-left: 15em;
+    margin-right: 15em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
