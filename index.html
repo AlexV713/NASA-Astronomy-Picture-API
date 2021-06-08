@@ -22,26 +22,30 @@
                 <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
             </section>
             <section v-if="info">
-                <h1>NASA Astronomy Picture of the Day</h1>
-                <div id="wrapper">
-                    <div id="daily-image">
-                        <div id="lightboxes-container">
-                            <a href="#image" class="image">
-                                <img v-bind:src="info.data.url" alt="NASA Astronomy Pic of the day" class="thumbail">
-                            </a>
-                            <div class="lightbox" id="image">
-                                <button onclick="goBack()">Go back</button>
-                                <img v-bind:src="info.data.url">
+                <div id="content">
+                    <h1>NASA Astronomy Picture of the Day</h1>
+                    <h2>{{  info.data.title }}</h2>
+                    <h3>{{ info.data.date }}</h3>
+                    <div id="wrapper">
+                        <div id="daily-image">
+                            <div id="lightboxes-container">
+                                <a href="#image" class="image">
+                                    <img v-bind:src="info.data.url" alt="NASA Astronomy Pic of the day"
+                                        class="thumbail">
+                                </a>
+                                <div class="lightbox" id="image">
+                                    <button onclick="goBack()">Go back</button>
+                                    <img v-bind:src="info.data.url">
+                                </div>
                             </div>
                         </div>
+                        <div id="information">
+                            <p class="expand">Click on image to expand</p>
+                            <p>{{ info.data.explanation }}</p>
+                        </div>
                     </div>
-                    <div id="information">
-                        <h2>{{  info.data.title }}</hh2>
-                        <h3>{{ info.data.date }}</h3>
-                        <p>{{ info.data.explanation }}</p>
-                    </div>
+                    <footer>All text and images are from and owned by NASA</footer>
                 </div>
-                <footer>All text and images are from and owned by NASA</footer>
                 <h2 class="info">Raw data from the API call (remove when you are done developing this page)</h2>
                 <pre class="info">{{ info }}</pre>
             </section>

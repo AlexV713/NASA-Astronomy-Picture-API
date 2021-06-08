@@ -1,12 +1,25 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #0e1014;
-  color: white;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: sticky;
+}
+
+#app {
+  display: block;
+  margin: 0.5em;
+  padding-top: 0.3em;
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+  background-color: #FEFEFE;
 }
 
 #app h1,
-#app h2 {
+#app h2,
+#app h3 {
   text-align: center;
 }
 
@@ -67,14 +80,12 @@ body {
   display: block;
 }
 
-#app #wrapper #information h3 {
-  text-align: center;
-  font-size: 1.4em;
+#app #wrapper #information .expand {
+  font-style: italic;
 }
 
 #app #wrapper #information p {
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 1em;
   line-height: 1.5;
   font-size: 1.2em;
 }
@@ -84,23 +95,20 @@ body {
 }
 
 #app footer {
+  padding-bottom: 0.3em;
   text-align: center;
   font-style: italic;
 }
 
 /* Tablet Stylesheets */
-@media only screen and (min-width: 481px) {
-  #app #information {
-    margin-left: 5em;
-    margin-right: 5em;
-  }
-}
-
 /* Desktop Styles */
 @media only screen and (min-width: 1025px) {
-  #app #information {
-    margin-left: 15em;
-    margin-right: 15em;
+  #app {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

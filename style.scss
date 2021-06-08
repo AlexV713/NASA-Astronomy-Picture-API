@@ -1,13 +1,23 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #0e1014;
-    color: white;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: sticky;
 }
 
 #app {
+    display: block;
+    margin: 0.5em;
+    padding-top: 0.3em;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    background-color: #FEFEFE;
     h1, 
-    h2 {
+    h2,
+    h3 {
         text-align: center;
     }
     #wrapper {
@@ -60,13 +70,11 @@ body {
             }
         }
         #information {
-            h3 {
-                text-align: center;
-                font-size: 1.4em;
+            .expand {
+                font-style: italic;
             }
             p {
-                margin-left: 1em;
-                margin-right: 1em;
+                margin: 1em;
                 line-height: 1.5;
                 font-size: 1.2em;
             }
@@ -76,6 +84,7 @@ body {
         display: none;
     }
     footer {
+        padding-bottom: 0.3em;
         text-align: center;
         font-style: italic;
     }
@@ -83,20 +92,15 @@ body {
 
 /* Tablet Stylesheets */
 @media only screen and (min-width: 481px) {
-    #app {
-        #information {
-            margin-left: 5em;
-            margin-right: 5em;
-        }
-    }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 1025px) {
     #app {
-        #information {
-            margin-left: 15em;
-            margin-right: 15em;
-        }
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+        height: auto;
     }
 }
